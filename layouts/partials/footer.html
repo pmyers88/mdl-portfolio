@@ -1,25 +1,6 @@
-<style>
-.mdl-mini-footer {
-  padding: 10px 10px;
-  background-color: inherit;
-}
-.mdl-mini-footer hr {
-  width: 100%;
-}
-.simple-footer {
-  width: 100%;
-  text-align: center;
-}
-.simple-footer p {
-  margin-top: 10px;
-  margin-bottom: 10px;
-  font-size: 12px;
-  line-height: 1.1;
-}
-</style>
-<footer class="mdl-mini-footer">
+<footer class="mdl-mini-footer portfolio-footer">
   <hr>
-  <div class="simple-footer">
+  <div class="portfolio-simple-footer">
     <p>{{ with .Site.Params.footer.copyright }}{{ . | markdownify }}{{ else }}© {{.Now.Format "2006"}} {{ end }}</p>
     {{ if ne .Site.Params.footer.poweredBy false }}<p>Powered by <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/pmyers88/mdl-portfolio/">MDL Portfoio</a>.</p>{{ end }}
   </div>
