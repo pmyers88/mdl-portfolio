@@ -4,9 +4,11 @@
     {{ partial "head.html" . }}
   </head>
   <body>
-    {{ partial "header.html" . }}
-    {{ partial "body.html" . }}
-    {{ partial "footer.html" . }}
-    {{ partial "ga.html" . }}
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      {{ partial "header.html" . }}
+      {{ partial "body.html" . }}
+      {{ partial "footer.html" . }}
+      {{ partial "ga.html" . }}
+    </div>
   </body>
 </html>
