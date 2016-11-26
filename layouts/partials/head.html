@@ -6,7 +6,7 @@
 {{ with .Site.Params.head.title }}<title>{{ . }}</title>{{ end }}
 
 <!-- Go Metatag: http://gohugo.io/templates/variables/#hugo-variables -->
-<meta name="generator" content="{{ .Hugo.Generator }}">
+{{ .Hugo.Generator }}
 
 <!-- Disable tap highlight on IE -->
 <meta name="msapplication-tap-highlight" content="no">
