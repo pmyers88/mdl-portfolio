@@ -20,6 +20,7 @@
 }
 
 .portfolio-header-text {
+  width: 100%;
   display: table-cell;
   vertical-align: middle;
   margin: 0 auto;
