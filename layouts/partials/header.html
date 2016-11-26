@@ -1,0 +1,94 @@
+<!-- Uses a transparent header that draws on top of the layout's background -->
+<style>
+.portfolio-header {
+  background: url('images/grand_canyon.jpg') right / cover;
+}
+.portfolio-header .mdl-layout__header,
+.portfolio-header .mdl-layout__drawer-button,
+.portfolio-header a {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+  color: white;
+}
+.portfolio-header .mdl-layout__header-row {
+  padding: 0;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.portfolio-logo-row {
+  min-height: 400px;
+  padding: 0px;
+}
+.portfolio-header-text {
+  display: table-cell;
+  vertical-align: middle;
+  margin: 0 auto;
+  text-align: center;
+}
+.mdl-layout__title {
+  font-size: 56px;
+  font-weight: 300;
+}
+.portfolio-navigation-row {
+  background-color: rgba(0, 0, 0, 0.2);
+  text-transform: uppercase;
+  height: 45px;
+}
+.portfolio-navigation-row  .mdl-navigation {
+  text-align: center;
+  max-width: 900px;
+  width: 100%;
+}
+.portfolio-navigation-row .mdl-navigation__link {
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  line-height: 42px;
+}
+.portfolio-navigation-row .is-active {
+  position: relative;
+  font-weight: bold;
+}
+.portfolio-navigation-row .is-active:after {
+  content: "";
+  width: 70%;
+  height: 2px;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(255,64,129);
+  left: 15%;
+}
+.portfolio-social a {
+  margin: 10px;
+}
+</style>
+
+
+<header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
+  <div class="mdl-layout__header-row portfolio-logo-row">
+    <div class="portfolio-header-text">
+      <h1 class="mdl-layout__title">{{ with .Site.Params.header.title }}{{ . }}{{ end }}</h1>
+      <h4>{{ with .Site.Params.header.subtitle }}{{ . }}{{ end }}</h4>
+      {{ partial "social.html" .}}
+    </div>
+  </div>
+  <div class="mdl-layout__header-row portfolio-navigation-row mdl-layout--large-screen-only">
+    <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+      <a class="mdl-navigation__link is-active" href="index.html">{{ with .Site.Params.header.nav.portfolio }}{{ . }}{{ end }}</a>
+      <a class="mdl-navigation__link" href="blog.html">{{ with .Site.Params.header.nav.blog }}{{ . }}{{ end }}</a>
+      <a class="mdl-navigation__link" href="about.html">{{ with .Site.Params.header.nav.about }}{{ . }}{{ end }}</a>
+      <a class="mdl-navigation__link" href="contact.html">{{ with .Site.Params.header.nav.contact }}{{ . }}{{ end }}</a>
+    </nav>
+  </div>
+</header>
+<div class="mdl-layout__drawer mdl-layout--small-screen-only">
+  <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
+    <a class="mdl-navigation__link is-active" href="index.html">{{ with .Site.Params.header.nav.portfolio }}{{ . }}{{ end }}</a>
+    <a class="mdl-navigation__link" href="blog.html">{{ with .Site.Params.header.nav.blog }}{{ . }}{{ end }}</a>
+    <a class="mdl-navigation__link" href="about.html">{{ with .Site.Params.header.nav.about }}{{ . }}{{ end }}</a>
+    <a class="mdl-navigation__link" href="contact.html">{{ with .Site.Params.header.nav.contact }}{{ . }}{{ end }}</a>
+  </nav>
+</div>
