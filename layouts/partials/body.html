@@ -1,5 +1,8 @@
 <main class="mdl-layout__content">
-  <p>Content</p>
-  <p>goes</p>
-  <p>here</p>
+  <div class="mdl-grid portfolio-max-width">
+    <h1 id="title">{{.Site.Title}}</h1>
+    {{ range first 10 .Data.Pages }}
+        {{ .Render "summary"}}
+    {{ end }}
+  </div>
 </main>
