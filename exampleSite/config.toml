@@ -2,3 +2,34 @@ baseurl = "http://example.com/"
 languageCode = "en-us"
 title = "Material Design Lite Portfolio Theme"
 theme = "mdl-portfolio"
+
+[params]
+
+    [params.head]
+        description = "Mathematician - Writer"
+        title = "Ada Lovelace"
+
+    # replace landscape.jpg under static/img with your own image
+    [params.header]
+        title = "Ada Lovelace"
+        subtitle = "Mathematician - Writer"
+
+        [params.header.nav]
+            portfolio = "Portfolio"
+            blog = "Blog"
+            about = "About"
+            contact = "Contact"
+
+    [params.social]
+        twitter = "myusername"
+        google = "myusername"
+        facebook = "myusername"
+        github = "myusername"
+        instagram = "myusername"
+        linkedIn = "myusername"
+        stackoverflow = "myusername"
+        email = "adalovelace@gmail.com"
+        resume = "resume.html"
+
+    [params.ga]
+        id = "UA-XXXXXXXX-1"
