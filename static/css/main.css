@@ -1,5 +1,5 @@
 .portfolio-header {
-  background: url('img/header-bg.jpg') right / cover;
+  background: url('/img/header-bg.jpg') right / cover;
 }
 
 .portfolio-header .mdl-layout__header,
