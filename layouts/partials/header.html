@@ -1,6 +1,7 @@
-<header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
+  <header class="mdl-layout__header mdl-layout__header--waterfall portfolio-header">
   <div class="mdl-layout__header-row portfolio-header-row">
     <div class="portfolio-header-text">
+      <img src="/img/headshot.jpg" class="headshot">
       <h1 class="mdl-layout__title portfolio-title">{{ with .Site.Params.header.title }}{{ . }}{{ end }}</h1>
       <h4>{{ with .Site.Params.header.subtitle }}{{ . }}{{ end }}</h4>
       {{ partial "social.html" .}}
