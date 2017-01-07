@@ -1,0 +1,10 @@
+<div class="personal-info-row">
+  <div class="personal-info-content">
+    <img src="/img/headshot.jpg" class="headshot">
+    <div class="personal-info-text">
+      <h1 class="mdl-layout__title personal-info-title">{{ with .Site.Params.header.title }}{{ . }}{{ end }}</h1>
+      <h4>{{ with .Site.Params.header.subtitle }}{{ . }}{{ end }}</h4>
+      {{ partial "social.html" .}}
+    </div>
+  </div>
+</div>

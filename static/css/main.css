@@ -10,25 +10,25 @@
           justify-content: center;
 }
 
-.portfolio-header-row {
+.personal-info-row {
   min-height: 350px;
   margin-top: 30px;
   margin-bottom: 30px;
   padding: 0px;
 }
 
-.is-compact .portfolio-header-row {
+.is-compact .personal-info-row {
   min-height: auto;
   margin: 0px;
   padding: 0px;
 }
 
-.portfolio-header-content {
+.personal-info-content {
   width: 100%;
   text-align: center;
 }
 
-.is-compact .portfolio-header-content {
+.is-compact .personal-info-content {
   height: 100%;
 }
 
@@ -49,49 +49,13 @@
   margin-top: 3px;
 }
 
-.portfolio-title {
-  font-size: 44px;
-  font-weight: 300;
-}
-
-.is-compact .portfolio-header-text {
+.is-compact .personal-info-text {
   display: none;
 }
 
-.portfolio-navigation-row {
-  background-color: rgba(0, 0, 0, 0.2);
-  text-transform: uppercase;
-  height: 45px;
-}
-
-.portfolio-navigation-row  .mdl-navigation {
-  text-align: center;
-  max-width: 900px;
-  width: 100%;
-}
-
-.portfolio-navigation-row .mdl-navigation__link {
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  line-height: 42px;
-}
-
-.portfolio-navigation-row .is-active {
-  position: relative;
-  font-weight: bold;
-}
-
-.portfolio-navigation-row .is-active:after {
-  content: "";
-  width: 70%;
-  height: 2px;
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  background-color: rgb(255,64,129);
-  left: 15%;
+.personal-info-title {
+  font-size: 44px;
+  font-weight: 300;
 }
 
 .portfolio-social a {
@@ -100,11 +64,7 @@
 
 .portfolio-footer {
   padding: 10px 10px;
-  background-color: inherit;
-}
-
-.portfolio-footer hr {
-  width: 100%;
+  background-color: #424242;
 }
 
 .portfolio-simple-footer {
