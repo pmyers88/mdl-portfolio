@@ -23,12 +23,12 @@
   padding: 0px;
 }
 
-.portfolio-header-text {
+.portfolio-header-content {
   width: 100%;
   text-align: center;
 }
 
-.is-compact .portfolio-header-text {
+.is-compact .portfolio-header-content {
   height: 100%;
 }
 
@@ -54,7 +54,7 @@
   font-weight: 300;
 }
 
-.is-compact .portfolio-title h1, h4 {
+.is-compact .portfolio-header-text {
   display: none;
 }
 
