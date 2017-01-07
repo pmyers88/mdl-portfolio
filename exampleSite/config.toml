@@ -9,6 +9,10 @@ theme = "mdl-portfolio"
         description = "Mathematician - Writer"
         title = "Ada Lovelace"
 
+        [params.head.style]
+            primary = "red"
+            accent = "teal"
+
     # replace landscape.jpg under static/img with your own image
     [params.header]
         title = "Ada Lovelace"
