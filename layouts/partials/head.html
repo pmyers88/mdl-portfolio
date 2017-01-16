@@ -47,7 +47,11 @@ material.red-teal.min.css
 material.blue-orange.min.css
 material.purple-indigo.min.css
 -->
-<link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+{{ if and (isset .Site.Params.head.style "primary") (isset .Site.Params.head.style "accent" ) }}
+  <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.{{ .Site.Params.head.style.primary }}-{{ .Site.Params.head.style.accent }}.min.css">
+{{ else }}
+  <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
+{{ end }}
 
 <!-- Font Awesome Icons -->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">

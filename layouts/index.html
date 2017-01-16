@@ -6,8 +6,10 @@
   <body>
     <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
       {{ partial "header.html" . }}
-      {{ partial "body.html" . }}
-      {{ partial "footer.html" . }}
+      <main class="mdl-layout__content">
+        {{ partial "body.html" . }}
+        {{ partial "footer.html" . }}
+      </main>
       {{ partial "ga.html" . }}
     </div>
   </body>
