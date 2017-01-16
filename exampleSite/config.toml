@@ -6,13 +6,17 @@ theme = "mdl-portfolio"
 [params]
 
     [params.head]
-        description = "Mathematician - Writer"
-        title = "Ada Lovelace"
+        description = "Turing Portfolio"
+        title = "Alan Turing"
 
-    # replace landscape.jpg under static/img with your own image
+        [params.head.style]
+            primary = "red"
+            accent = "teal"
+
+    # replace headshot.jpg under static/img with your own image
     [params.header]
-        title = "Ada Lovelace"
-        subtitle = "Mathematician - Writer"
+        title = "Alan Turing"
+        subtitle = "Computer Scientist - Mathematician - Logician - Cryptanalyst"
 
         [params.header.nav]
             portfolio = "Portfolio"
