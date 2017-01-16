@@ -5,7 +5,7 @@
         <img class="article-image" src="img/portfolio/{{ .Params.img }}" border="0" alt="">
       </div>
       <div class="mdl-card__title">
-        <h2 class="mdl-card__title-text">{{ .Params.title }}</h2>
+        <h2 class="mdl-card__title-text">{{ .Title }}</h2>
       </div>
       <div class="mdl-card__supporting-text">
         {{ .Params.description | markdownify }}
