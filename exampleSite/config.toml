@@ -13,7 +13,7 @@ theme = "mdl-portfolio"
             primary = "red"
             accent = "teal"
 
-    # replace landscape.jpg under static/img with your own image
+    # replace headshot.jpg under static/img with your own image
     [params.header]
         title = "Ada Lovelace"
         subtitle = "Mathematician - Writer"

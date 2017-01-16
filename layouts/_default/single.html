@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      {{ partial "header.html" . }}
+      <main class="mdl-layout__content">
+        <div class="mdl-grid portfolio-max-width">
+          <div class="mdl-cell mdl-cell--12-col mdl-card mdl-shadow--4dp">
+            <div class="mdl-card__title">
+              <h2 class="mdl-card__title-text">{{ .Title }}</h2>
+            </div>
+            <div class="mdl-card__media">
+              <img class="article-image" src="/img/portfolio/{{ .Params.img }}" border="0" alt="">
+            </div>
+            <div class="mdl-grid portfolio-copy">
+              {{ .Content | markdownify }}
+            </div>
+          </div>
+        </div>
+
+        {{ partial "footer.html" . }}
+      </main>
+      {{ partial "ga.html" . }}
+    </div>
+  </body>
+</html>

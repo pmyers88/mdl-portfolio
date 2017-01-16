@@ -1,17 +1,17 @@
 <div class="mdl-grid portfolio-max-width">
-  {{ range $.Site.Data.projects }}
+  {{ range (where .Data.Pages "Section" "project") }}
     <div class="mdl-cell mdl-card mdl-shadow--4dp portfolio-card">
       <div class="mdl-card__media">
-        <img class="article-image" src="img/portfolio/{{ .img }}" border="0" alt="">
+        <img class="article-image" src="img/portfolio/{{ .Params.img }}" border="0" alt="">
       </div>
       <div class="mdl-card__title">
-        <h2 class="mdl-card__title-text">{{ .title }}</h2>
+        <h2 class="mdl-card__title-text">{{ .Params.title }}</h2>
       </div>
       <div class="mdl-card__supporting-text">
-        {{ .description | markdownify }}
+        {{ .Params.description | markdownify }}
       </div>
       <div class="mdl-card__actions mdl-card--border">
-        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="portfolio-example01.html">Read more</a>
+        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect mdl-button--accent" href="{{ .Permalink }}">Read more</a>
       </div>
     </div>
   {{ end }}
