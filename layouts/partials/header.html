@@ -1,21 +1,9 @@
-<header class="mdl-layout__header">
-  <div class="mdl-layout__header-row mdl-layout--large-screen-only">
-    <span class="mdl-layout-title">{{ with .Site.Params.header.title }}{{ . }}{{ end }}</span>
-    <div class="mdl-layout-spacer"></div>
-    <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-      {{ with .Site.Params.header.nav.portfolio }}<a class="mdl-navigation__link is-active" href="/index.html">{{ . }}</a>{{ end }}
-      {{ with .Site.Params.header.nav.blog }}<a class="mdl-navigation__link" href="blog.html">{{ . }}</a>{{ end }}
-      {{ with .Site.Params.header.nav.about }}<a class="mdl-navigation__link" href="about.html">{{ . }}</a>{{ end }}
-      {{ with .Site.Params.header.nav.contact }}<a class="mdl-navigation__link" href="contact.html">{{ . }}</a>{{ end }}
-    </nav>
-  </div>
-</header>
-<div class="mdl-layout__drawer mdl-layout--small-screen-only">
-  <span class="mdl-layout-title">{{ with .Site.Params.header.title }}{{ . }}{{ end }}</span>
-  <nav class="mdl-navigation mdl-typography--body-1-force-preferred-font">
-    {{ with .Site.Params.header.nav.portfolio }}<a class="mdl-navigation__link is-active" href="/index.html">{{ . }}</a>{{ end }}
-    {{ with .Site.Params.header.nav.blog }}<a class="mdl-navigation__link" href="blog.html">{{ . }}</a>{{ end }}
-    {{ with .Site.Params.header.nav.about }}<a class="mdl-navigation__link" href="about.html">{{ . }}</a>{{ end }}
-    {{ with .Site.Params.header.nav.contact }}<a class="mdl-navigation__link" href="contact.html">{{ . }}</a>{{ end }}
-  </nav>
-</div>
+<!doctype html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}en-US{{ end }}">
+  <head>
+    {{ partial "head.html" . }}
+  </head>
+  <body>
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      {{ partial "navigation.html" . }}
+      <main class="mdl-layout__content">

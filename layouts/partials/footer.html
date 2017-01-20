@@ -1,6 +1,11 @@
-<footer class="mdl-mini-footer portfolio-footer">
-  <div class="portfolio-simple-footer">
-    <p>{{ with .Site.Params.footer.copyright }}{{ . | markdownify }}{{ else }}© {{.Now.Format "2006"}} {{ end }}</p>
-    {{ if ne .Site.Params.footer.poweredBy false }}<p>Powered by <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/pmyers88/mdl-portfolio/">MDL Portfoio</a>.</p>{{ end }}
-  </div>
-</footer>
+          <footer class="mdl-mini-footer portfolio-footer">
+            <div class="portfolio-simple-footer">
+              <p>{{ with .Site.Params.footer.copyright }}{{ . | markdownify }}{{ else }}© {{.Now.Format "2006"}} {{ end }}</p>
+              {{ if ne .Site.Params.footer.poweredBy false }}<p>Powered by <a href="https://gohugo.io/">Hugo</a> &amp; <a href="https://github.com/pmyers88/mdl-portfolio/">MDL Portfoio</a>.</p>{{ end }}
+            </div>
+          </footer>
+        </main>
+      {{ partial "ga.html" . }}
+    </div>
+  </body>
+</html>
